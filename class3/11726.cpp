@@ -14,8 +14,8 @@ int main(){
   dp.push_back(1); // dp[1]
   dp.push_back(2); // dp[2]
 
-  for(int i = 3; i < 1000; ++i){
-    dp.push_back(dp[i - 1] + dp[i - 2]);
+  for(int i = 3; i <= 1000; ++i){
+      dp.push_back((dp[i - 1] + dp[i - 2]) % 10007);
   }
   cout << dp[N] << endl;
   return 0;
